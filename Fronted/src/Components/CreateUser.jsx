@@ -41,47 +41,50 @@ const CreateUser = () => {
   };
 
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="Name">Name</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.name}
-      />
-      <br />
-      <label htmlFor="location">Location</label>
-      <input
-        id="location"
-        name="location"
-        type="text"
-        onChange={formik.handleChange}
-        value={formik.values.location}
-      />
+    <>
+      <h1>Create User</h1>
+      <form onSubmit={formik.handleSubmit}>
+        <label htmlFor="Name">Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          onChange={formik.handleChange}
+          value={formik.values.name}
+        />
+        <br />
+        <label htmlFor="location">Location</label>
+        <input
+          id="location"
+          name="location"
+          type="text"
+          onChange={formik.handleChange}
+          value={formik.values.location}
+        />
 
-      <br />
-      <label htmlFor="email">Email Address</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
+        <br />
+        <label htmlFor="email">Email Address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+        />
 
-      <br />
-      <label htmlFor="image">Image</label>
-      <input
-        id="image"
-        name="image"
-        type="file"
-        onChange={handleImageChange}
-        value={formik.values.preview}
-      />
+        <br />
+        <label htmlFor="image">Image</label>
+        <input
+          id="image"
+          name="image"
+          type="file"
+          onChange={handleImageChange}
+          value={formik.values.preview}
+        />
 
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+    </>
   );
 };
 
